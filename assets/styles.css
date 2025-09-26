@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Pastel Pink Primary Colors */
+  --bs-primary: #F8BBD9;
+  --bs-primary-rgb: 248, 187, 217;
+  --bs-primary-dark: #E8A5C8;
+  --bs-primary-light: #FBD0E4;
+
+  /* Complementary Alert Colors */
+  --bs-success: #C8E6C9;
+  --bs-info: #B3E5FC;
+  --bs-warning: #FFE0B2;
+  --bs-danger: #FFCDD2;
+
+  /* Surface Colors */
+  --surface-primary: #FEFBFC;
+  --surface-secondary: #F5F1F3;
+  --surface-muted: #FAF7F8;
+
+  /* Interactive States */
+  --hover-primary: rgba(248, 187, 217, 0.1);
+  --focus-ring: rgba(248, 187, 217, 0.25);
+  --active-primary: #E294C0;
+
+  /* Border Radius */
+  --bs-border-radius: 0.75rem;
+  --bs-border-radius-sm: 0.5rem;
+  --bs-border-radius-lg: 1rem;
+
+  /* Typography */
+  --bs-font-sans-serif: "Bitcount Prop Single Ink", "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+}
+
+/* Typography Override */
+body {
+  font-family: var(--bs-font-sans-serif) !important;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  background-color: var(--surface-muted);
+}
+
+/* Font Weight Classes */
+.fw-medium { font-weight: 500; }
+.fw-semibold { font-weight: 600; }
+
+/* Form Controls */
+.form-control,
+.form-select {
+  border-radius: var(--bs-border-radius) !important;
+  border: 1.5px solid #DADCE0 !important;
+  background-color: var(--surface-primary) !important;
+  transition: all 0.15s ease-in-out;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 0 0.25rem var(--focus-ring) !important;
+  background-color: var(--surface-muted) !important;
+}
+
+/* Buttons */
+.btn {
+  border-radius: var(--bs-border-radius) !important;
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+  transition: all 0.15s ease-in-out;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+}
+
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-primary-dark) !important;
+  border-color: var(--bs-primary-dark) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(248, 187, 217, 0.25) !important;
+}
+
+.btn-outline-primary {
+  color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+/* Rich pink background for secondary buttons */
+.btn-secondary {
+  background-color: var(--bs-primary-dark) !important;
+  border-color: var(--bs-primary-dark) !important;
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.btn-secondary:hover {
+  background-color: var(--active-primary) !important;
+  border-color: var(--active-primary) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(232, 165, 200, 0.25) !important;
+}
+
+/* Cards */
+.card {
+  border-radius: var(--bs-border-radius-lg) !important;
+  border: 1px solid #E8EAED !important;
+  background-color: var(--surface-primary) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+  transition: all 0.15s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+}
+
+.card-header {
+  background-color: var(--surface-secondary) !important;
+  border-bottom: 1px solid #E8EAED !important;
+  border-radius: var(--bs-border-radius-lg) var(--bs-border-radius-lg) 0 0 !important;
+  font-weight: 600;
+}
+
+/* Tables */
+.table {
+  --bs-table-bg: var(--surface-primary);
+}
+
+.table-dark {
+  --bs-table-color: #fff;
+  --bs-table-bg: #6C7B7F;
+  --bs-table-border-color: #80868B;
+}
+
+/* Rich pink background for better contrast on table headers */
+.table-dark {
+  --bs-table-color: #fff;
+  --bs-table-bg: var(--bs-primary-dark);
+  --bs-table-border-color: var(--bs-primary);
+}
+
+.table-dark th,
+.table-dark thead th {
+  background-color: var(--bs-primary-dark) !important;
+  color: #fff !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.table-dark th a,
+.table-dark th a:visited,
+.table-dark thead th a,
+.table-dark thead th a:visited {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.table-dark th a:hover,
+.table-dark th a:focus,
+.table-dark thead th a:hover,
+.table-dark thead th a:focus {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > td,
+.table-striped > tbody > tr:nth-of-type(odd) > th {
+  --bs-table-accent-bg: var(--surface-secondary);
+}
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  --bs-table-hover-bg: var(--hover-primary);
+}
+
+/* Alerts */
+.alert {
+  border-radius: var(--bs-border-radius) !important;
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+.alert-success {
+  background-color: var(--bs-success) !important;
+  border-color: #A5D6A7 !important;
+  color: #2E7D32 !important;
+}
+
+.alert-info {
+  background-color: var(--bs-info) !important;
+  border-color: #81D4FA !important;
+  color: #0277BD !important;
+}
+
+.alert-warning {
+  background-color: var(--bs-warning) !important;
+  border-color: #FFCC80 !important;
+  color: #F57C00 !important;
+}
+
+.alert-danger {
+  background-color: var(--bs-danger) !important;
+  border-color: #FFAB91 !important;
+  color: #D32F2F !important;
+}
+
+/* Modal Enhancements */
+.modal-content {
+  border-radius: var(--bs-border-radius-lg) !important;
+  border: none !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid #E8EAED !important;
+  background-color: var(--surface-secondary) !important;
+  border-radius: var(--bs-border-radius-lg) var(--bs-border-radius-lg) 0 0 !important;
+}
+
+/* Button Groups */
+.btn-group .btn {
+  margin: 0 0.125rem;
+}
+
+.btn-group .btn:first-child {
+  margin-left: 0;
+}
+
+.btn-group .btn:last-child {
+  margin-right: 0;
+}
+
+/* Utility Classes */
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+/* Container Spacing */
+.container {
+  padding-top: 1.5rem;
+}
+
+/* Smooth Animations */
+* {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+/* Focus Outline for Accessibility */
+button:focus,
+.btn:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
+}

@@ -1,0 +1,21 @@
+# Claude Code directories
+.claude/
+
+# Playwright MCP directories
+.playwright-mcp/
+
+# PHP temporary files
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
